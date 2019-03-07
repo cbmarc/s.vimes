@@ -10,7 +10,7 @@ RUN apk --no-cache add \
     nightwatch@'<1.0' \
   && npm install -g \
     # Add nightwatch-video-recorder globally:
-    nightwatch-video-recorder@'3.0.0' \
+    nightwatch-video-recorder@'1.1.0' \
   # Clean up obsolete files:
   && rm -rf \
     /tmp/* \
@@ -26,5 +26,5 @@ WORKDIR /home/node
 
 COPY wait-for.sh /usr/local/bin/wait-for
 COPY entrypoint.sh /usr/local/bin/entrypoint
-
+COPY run-nightwatch.sh /usr/local/bin/run-nightwatch
 ENTRYPOINT ["entrypoint"]
