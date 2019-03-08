@@ -3,5 +3,5 @@ rm -rf /home/node/screenshots/*
 rm -rf /opt/node/videos/*
 rm -rf /opt/node/screenshots/*
 nightwatch "$@" 
-cp -R /home/node/videos/* /opt/node/videos/
-cp -R /home/node/screenshots/* /opt/node/screenshots/
+cp -R /home/node/videos/* /opt/node/videos/ 2>/dev/null
+cp -R /home/node/screenshots/* /opt/node/screenshots/ 2>/dev/null
