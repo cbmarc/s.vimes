@@ -1,9 +1,5 @@
 rm -rf /home/node/videos/*
 rm -rf /home/node/screenshots/*
-mkdir -p /home/node/videos/
-mkdir -p /home/node/screenshots/
-mkdir -p /opt/node/videos/
-mkdir -p /opt/node/screenshots/
 nightwatch "$@"
 RESULT=$(echo $?)
 cp -R /home/node/videos/* /opt/node/videos/ 2>/dev/null
