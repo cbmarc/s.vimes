@@ -10,9 +10,10 @@
         "path": "screenshots"
       },
       "videos": {
-        "enabled": true,
-        "delete_on_success": false,
-        "path": "videos"
+        "enabled": false,
+        "dir": "videos",
+        "display": "1",
+        "delete_on_pass": false
       },
       "launch_url": "http://nginx",
       "selenium_host": "chromedriver"
