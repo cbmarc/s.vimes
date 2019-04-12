@@ -7,10 +7,10 @@ RUN apk --no-cache add \
     ffmpeg \
   && npm install -g \
     # Install Nightwatch.js:
-    nightwatch@'<1.0' \
+    nightwatch \
   && npm install -g \
     # Add nightwatch-video-recorder globally:
-    nightwatch-video-recorder@'1.1.0' \
+    nightwatch-video-recorder@'2.0.0' \
   # Clean up obsolete files:
   && rm -rf \
     /tmp/* \
