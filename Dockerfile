@@ -1,20 +1,20 @@
 FROM alpine:3.7
 
 RUN apk --no-cache add \
-    # Install NodeJS:
-    nodejs \
-    # Install ffmpeg for video recording:
-    ffmpeg \
+  # Install NodeJS:
+  nodejs \
+  # Install ffmpeg for video recording:
+  ffmpeg \
   && npm install -g \
-    # Install Nightwatch.js:
-    nightwatch@1.1.0 \
+  # Install Nightwatch.js:
+  nightwatch@1.1.12 \
   && npm install -g \
-    # Add nightwatch-video-recorder globally:
-    nightwatch-video-recorder@'2.0.0' \
+  # Add nightwatch-video-recorder globally:
+  nightwatch-video-recorder@'2.0.0' \
   # Clean up obsolete files:
   && rm -rf \
-    /tmp/* \
-    /root/.npm
+  /tmp/* \
+  /root/.npm
 
 RUN adduser -D -u 1000 node && \
         mkdir -p /opt/node && \
